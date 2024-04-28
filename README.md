@@ -139,6 +139,6 @@ nix-build -I nixpkgs=/Users/harshthakur/Desktop/buildsafe/nix  -E 'with import <
 ## Credits
 [patryk4815](https://github.com/patryk4815/ctftools/tree/master/lima-vm) for initial Nix lima template.
 
-
+## Contributing
 All contributions are welcome! Feel free to create an issue or pull request or fork.
 
