@@ -1,11 +1,9 @@
 arch: "x86_64"
-# arch: "aarch64"
 
 images:
-  - location: "./imgs/nixos-aarch64.img"
-    arch: "aarch64"
-  - location: "./imgs/nixos-x86.img"
+  - location: "https://storage.googleapis.com/nixlima/nixos-x86-64.img"
     arch: "x86_64"
+    digest: "sha256:35ba070f93aa1c620e40fb8665ea37b45f6109115c74958f4a2b0c43a2800d79"
 
 
 # CPUs: if you see performance issues, try limiting cpus to 1.
@@ -36,3 +34,7 @@ mountType: "9p"
 containerd:
   system: false
   user: false
+
+portForwards:
+- guestSocket: "/var/run/docker.sock"
+  hostSocket: "{{.Dir}}/sock/docker.sock"
