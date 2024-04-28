@@ -134,3 +134,11 @@ nix-build -I nixpkgs=/Users/harshthakur/Desktop/buildsafe/nix  -E 'with import <
 * Investigate cross compilation stability for nix builds for same OS, different arch. If works, maybe we can use vz instead of qemu.
 * Invesigate networking to enable port-forwarding from host for accessing containers
 * Package it similar to [Finch](https://github.com/runfinch/finch)
+
+
+## Credits
+[patryk4815](https://github.com/patryk4815/ctftools/tree/master/lima-vm) for initial Nix lima template.
+
+
+All contributions are welcome! Feel free to create an issue or pull request or fork.
+
