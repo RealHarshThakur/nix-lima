@@ -27,10 +27,11 @@ environment.systemPackages =
 ```
 
 ### Start the VM
+* Copy the `nix.yaml` file locally from the repo.
 
-This can take a minute or two. 
+* Launch the VM. This can take a minute or two. 
 ```
-limactl delete -f default && limactl start --name=default x86.yaml
+limactl delete -f default && limactl start --name=default nix.yaml
 ```
 
 ### Connect Docker CLI to VM
