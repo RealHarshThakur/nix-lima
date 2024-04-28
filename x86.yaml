@@ -1,0 +1,38 @@
+arch: "x86_64"
+# arch: "aarch64"
+
+images:
+  - location: "./imgs/nixos-aarch64.img"
+    arch: "aarch64"
+  - location: "./imgs/nixos-x86.img"
+    arch: "x86_64"
+
+
+# CPUs: if you see performance issues, try limiting cpus to 1.
+# 🟢 Builtin default: 4
+cpus: 8
+
+# Memory size
+# 🟢 Builtin default: "4GiB"
+memory: "8GiB"
+
+# Disk size
+# 🟢 Builtin default: "100GiB"
+disk: "100GiB"
+
+
+mounts:
+- location: "~"
+  9p:
+    # Try choosing "mmap" or "none" if you see a stability issue with the default "fscache".
+    cache: "fscache"
+- location: "/tmp/lima"
+  writable: true
+  9p:
+    cache: "mmap"
+
+mountType: "9p"
+
+containerd:
+  system: false
+  user: false
